@@ -2,34 +2,64 @@
     -fx-background-color: red;
 }
 
+.table-row-cell.error:selected {
+    -fx-background-color: darkred;
+    -fx-light-text-color: white;
+    -fx-dark-text-color: white;
+    -fx-mid-text-color: white;
+}
+
 .table-row-cell.error:hover {
     -fx-background-color: darkred;
+    -fx-light-text-color: white;
+    -fx-dark-text-color: white;
+    -fx-mid-text-color: white;
 }
 
 .table-row-cell.good {
     -fx-background-color: greenyellow;
 }
 
+.table-row-cell.good:selected {
+    -fx-background-color: #3ea60c;
+    -fx-light-text-color: black;
+    -fx-dark-text-color: black;
+    -fx-mid-text-color: black;
+}
+
 .table-row-cell.good:hover {
     -fx-background-color: #3ea60c;
+    -fx-light-text-color: black;
+    -fx-dark-text-color: black;
+    -fx-mid-text-color: black;
 }
 
 .table-row-cell.bad {
     -fx-background-color: yellow;
 }
 
+.table-row-cell.bad:selected {
+    -fx-background-color: #efbd00;
+    -fx-light-text-color: black;
+    -fx-dark-text-color: black;
+    -fx-mid-text-color: black;
+}
+
 .table-row-cell.bad:hover {
-    -fx-background-color: #959500;
+    -fx-background-color: #efbd00;
+    -fx-light-text-color: black;
+    -fx-dark-text-color: black;
+    -fx-mid-text-color: black;
 }
 
 .table-row-cell.offline {
+    -fx-background-color: darkgray;
+}
+
+.table-row-cell.offline:selected {
     -fx-background-color: gray;
-    -fx-text-fill: white;
 }
 
 .table-row-cell.offline:hover {
-    -fx-background-color: black;
-    -fx-light-text-color: white;
-    -fx-dark-text-color: white;
-    -fx-mid-text-color: white;
+    -fx-background-color: gray;
 }

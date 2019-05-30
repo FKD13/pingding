@@ -42,7 +42,7 @@
         <columns>
           <TableColumn fx:id="url" prefWidth="200.0" text="URL" />
           <TableColumn fx:id="ping" prefWidth="100.0" text="Ping" />
-          <TableColumn fx:id="ip" prefWidth="150.0" text="Ip" />
+          <TableColumn fx:id="ip" prefWidth="150.0" text="IP" />
         </columns>
       </TableView>
    </center>
