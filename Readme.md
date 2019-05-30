@@ -1,13 +1,13 @@
-#PingDing
+# PingDing
 
 A thing that Pings things
 
-##Requirements
+## Requirements
 
 - Java 11
 - JavaFX 11
 
-##Description
+## Description
 
 This Program is a tool to monitor the ping of multiple sites at once.
 
@@ -17,7 +17,7 @@ Double click to edit the **URL**.
 
 The program will update it's values every 10 seconds.
 
-##Compile
+## Compile
 
 use **IntelliJ** or manually using the command line.
 
