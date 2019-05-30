@@ -31,3 +31,8 @@ Run program: <br>
 `cd out` <br>
 `java --module-path <path to javafx>/lib --add-modules=javafx.fxml,javafx.graphics,javafx.controls sample.Main`
 
+These commands can be run automatically by using the makefile. Run:
+
+	export JAVAFX_11_LIB=<path to javafx>/lib	
+	make
+
