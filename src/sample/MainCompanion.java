@@ -76,8 +76,6 @@ public class MainCompanion {
     }
 
     private void onExit() {
-        timer.cancel();
-        new ConfigWriter("/sample/config.txt").saveUrls(model);
         Platform.exit();
     }
 
@@ -92,5 +90,10 @@ public class MainCompanion {
             model.remove(selected);
         }
         table.refresh();
+    }
+
+    public void quit() {
+        timer.cancel();
+        new ConfigWriter("/sample/config.txt").saveUrls(model);
     }
 }

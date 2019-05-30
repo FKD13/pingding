@@ -12,7 +12,6 @@ public class PingCell extends TableCell<PingThing, String> {
         ObservableList<String> rowStyle = getTableRow().getStyleClass();
 
         rowStyle.removeAll("offline", "good", "bad", "error");
-        //rowStyle.clear();
         if (!isEmpty()) {
             if (!s.equals("-")) {
                 if (s.matches("^[0-9]+$")) {
