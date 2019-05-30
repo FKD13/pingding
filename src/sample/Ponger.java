@@ -22,7 +22,7 @@ public class Ponger {
         }
     }
 
-    private void pingUrl(PingThing pingThing) {
+    public void pingUrl(PingThing pingThing) {
         try {
             InetAddress address = InetAddress.getByName(pingThing.getUrl());
             long startTime = System.nanoTime();

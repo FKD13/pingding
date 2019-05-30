@@ -38,6 +38,8 @@ public class MainCompanion {
     public void initialize() {
 
         model = new ConfigReader("/sample/config.txt").getUrls();
+        ponger = new Ponger(this);
+
         table.setItems(model);
 
         table.setEditable(true);
@@ -50,6 +52,7 @@ public class MainCompanion {
         url.setMinWidth(200);
         url.setCellValueFactory(new PropertyValueFactory<>("url"));
         url.setCellFactory(c -> new TextFieldTableCell<>(new DefaultStringConverter()));
+        url.setOnEditCommit(new UrlEditCommitHandler(ponger));
 
         ip.setEditable(false);
         ip.setCellValueFactory(new PropertyValueFactory<>("ip"));

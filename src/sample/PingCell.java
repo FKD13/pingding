@@ -33,6 +33,8 @@ public class PingCell extends TableCell<PingThing, String> {
             } else {
                 setText(s);
             }
+
+
         }
     }
 }
