@@ -38,7 +38,7 @@
       </MenuBar>
    </top>
    <center>
-      <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" stylesheets="@Style.css" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="url" prefWidth="200.0" text="URL" />
           <TableColumn fx:id="ping" prefWidth="100.0" text="Ping" />

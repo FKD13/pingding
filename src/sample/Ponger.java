@@ -28,9 +28,9 @@ public class Ponger {
             long startTime = System.nanoTime();
             if (address.isReachable(3000)) {
                 long endTime = System.nanoTime();
-                pingThing.setLatency(Math.round((endTime - startTime) / 1000000.0) + " ms");
+                pingThing.setLatency(Math.round((endTime - startTime) / 1000000.0) + "");
             } else {
-                pingThing.setLatency("offline");
+                pingThing.setLatency("Offline");
             }
             String ip = address.getHostAddress();
             if (ip != null) {

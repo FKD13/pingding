@@ -1,7 +1,6 @@
 package sample;
 
 import javafx.application.Platform;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
@@ -46,7 +45,7 @@ public class MainCompanion {
         ping.setEditable(false);
         ping.setMinWidth(100);
         ping.setCellValueFactory(new PropertyValueFactory<>("latency"));
-        ping.setCellFactory(c -> new TextFieldTableCell<>());
+        ping.setCellFactory(c -> new PingCell());
 
         url.setMinWidth(200);
         url.setCellValueFactory(new PropertyValueFactory<>("url"));

@@ -1,0 +1,35 @@
+.table-row-cell.error {
+    -fx-background-color: red;
+}
+
+.table-row-cell.error:hover {
+    -fx-background-color: darkred;
+}
+
+.table-row-cell.good {
+    -fx-background-color: greenyellow;
+}
+
+.table-row-cell.good:hover {
+    -fx-background-color: #3ea60c;
+}
+
+.table-row-cell.bad {
+    -fx-background-color: yellow;
+}
+
+.table-row-cell.bad:hover {
+    -fx-background-color: #959500;
+}
+
+.table-row-cell.offline {
+    -fx-background-color: gray;
+    -fx-text-fill: white;
+}
+
+.table-row-cell.offline:hover {
+    -fx-background-color: black;
+    -fx-light-text-color: white;
+    -fx-dark-text-color: white;
+    -fx-mid-text-color: white;
+}
