@@ -49,7 +49,7 @@ public class MainCompanion {
 
     public void initialize() {
 
-        model = new ConfigReader("/sample/config.txt").getUrls();
+        model = new ConfigReader("/sample/recources/config.txt").getUrls();
         ponger = new Ponger(this);
 
         table.setItems(model);
@@ -96,7 +96,7 @@ public class MainCompanion {
     }
 
     private void onPingLimit() {
-        main.openPopupWindow("/sample/pinglimitwindow/PingLimitWindow.fxml", "PingLimit", new PingLimitCompanion(this));
+        main.openPopupWindow("/sample/recources/PingLimitWindow.fxml", "PingLimit", new PingLimitCompanion(this));
     }
 
     private void onInsert() {
@@ -114,7 +114,7 @@ public class MainCompanion {
 
     public void quit() {
         timer.cancel();
-        new ConfigWriter("/sample/config.txt").saveUrls(model);
+        new ConfigWriter("/sample/recources/config.txt").saveUrls(model);
     }
 
     //getters and setters

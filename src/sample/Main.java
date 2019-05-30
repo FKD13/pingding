@@ -15,7 +15,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         mainCompanion = new MainCompanion(this);
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("recources/Main.fxml"));
         loader.setController(mainCompanion);
         Scene scene = new Scene(loader.load());
         primaryStage.setTitle("PingDing");
