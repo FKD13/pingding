@@ -40,6 +40,7 @@ public class Ponger {
             pingThing.setLatency("UnknownHost");
         } catch (IOException e) {
             pingThing.setLatency("Error");
+            pingThing.setIp("-");
         }
         Platform.runLater(() -> mainCompanion.refresh());
     }

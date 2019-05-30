@@ -9,6 +9,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.util.converter.DefaultStringConverter;
+import sample.pinglimitwindow.PingLimitCompanion;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -30,10 +31,21 @@ public class MainCompanion {
     public MenuItem insert;
     @FXML
     public MenuItem exit;
+    @FXML
+    public MenuItem pinglimit;
+
 
     private ObservableList<PingThing> model;
     private Ponger ponger;
     private Timer timer;
+    private Main main;
+
+    // some settings
+    private int goodPingLimit = 30;
+
+    public MainCompanion(Main main) {
+        this.main = main;
+    }
 
     public void initialize() {
 
@@ -47,7 +59,7 @@ public class MainCompanion {
         ping.setEditable(false);
         ping.setMinWidth(100);
         ping.setCellValueFactory(new PropertyValueFactory<>("latency"));
-        ping.setCellFactory(c -> new PingCell());
+        ping.setCellFactory(c -> new PingCell(this));
 
         url.setMinWidth(200);
         url.setCellValueFactory(new PropertyValueFactory<>("url"));
@@ -61,6 +73,7 @@ public class MainCompanion {
         delete.setOnAction(e -> onDelete());
         insert.setOnAction(e -> onInsert());
         exit.setOnAction(e -> onExit());
+        pinglimit.setOnAction(e -> onPingLimit());
 
         ponger = new Ponger(this);
         timer = new Timer();
@@ -82,6 +95,10 @@ public class MainCompanion {
         Platform.exit();
     }
 
+    private void onPingLimit() {
+        main.openPopupWindow("/sample/pinglimitwindow/PingLimitWindow.fxml", "PingLimit", new PingLimitCompanion(this));
+    }
+
     private void onInsert() {
         model.add(new PingThing("<new>", "-", "-"));
         table.refresh();
@@ -98,5 +115,15 @@ public class MainCompanion {
     public void quit() {
         timer.cancel();
         new ConfigWriter("/sample/config.txt").saveUrls(model);
+    }
+
+    //getters and setters
+
+    public int getGoodPingLimit() {
+        return goodPingLimit;
+    }
+
+    public void setGoodPingLimit(int goodPingLimit) {
+        this.goodPingLimit = goodPingLimit;
     }
 }
