@@ -1,4 +1,4 @@
-package sample;
+package pingding;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;

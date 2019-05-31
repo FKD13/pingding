@@ -22,3 +22,5 @@ out/
 hs_err_pid*
 
 .env
+
+target/

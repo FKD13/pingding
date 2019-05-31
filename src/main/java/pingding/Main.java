@@ -1,4 +1,4 @@
-package sample;
+package pingding;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +15,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         mainCompanion = new MainCompanion(this);
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("recources/Main.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Main.fxml"));
         loader.setController(mainCompanion);
         Scene scene = new Scene(loader.load());
         primaryStage.setTitle("PingDing");
@@ -25,7 +25,7 @@ public class Main extends Application {
 
     public void openPopupWindow(String pathToFxml, String windowName, Popup popup) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(pathToFxml));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource(pathToFxml));
             loader.setController(popup);
             Scene scene = new Scene(loader.load());
             Stage stage = new Stage();
