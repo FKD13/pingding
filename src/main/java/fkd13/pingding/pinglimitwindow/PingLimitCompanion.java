@@ -1,4 +1,4 @@
-package pingding.pinglimitwindow;
+package fkd13.pingding.pinglimitwindow;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
