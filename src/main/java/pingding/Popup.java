@@ -1,4 +1,4 @@
-package sample;
+package pingding;
 
 import javafx.scene.Scene;
 import javafx.stage.Stage;

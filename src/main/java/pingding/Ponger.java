@@ -1,4 +1,4 @@
-package sample;
+package pingding;
 
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
