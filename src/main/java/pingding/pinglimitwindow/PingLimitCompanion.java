@@ -39,7 +39,7 @@ public class PingLimitCompanion implements Popup {
         slider.setValue(mainCompanion.getGoodPingLimit());
     }
 
-    private void onConfirm() {
+        private void onConfirm() {
         mainCompanion.setGoodPingLimit((int) Math.ceil(slider.getValue()));
         stage.close();
     }

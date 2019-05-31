@@ -9,6 +9,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.util.converter.DefaultStringConverter;
+import pingding.logs.Logger;
+import pingding.logs.SqliteDAP;
 import pingding.pinglimitwindow.PingLimitCompanion;
 
 import java.util.Timer;
@@ -37,8 +39,10 @@ public class MainCompanion {
 
     private ObservableList<PingThing> model;
     private Ponger ponger;
+    private Logger logger;
     private Timer timer;
     private Main main;
+    private SqliteDAP sqliteDAP;
 
     // some settings
     private int goodPingLimit = 30;
@@ -48,6 +52,9 @@ public class MainCompanion {
     }
 
     public void initialize() {
+
+        sqliteDAP = new SqliteDAP();
+        logger = new Logger(this);
 
         model = new ConfigReader("/config.txt").getUrls();
         ponger = new Ponger(this);
@@ -125,5 +132,13 @@ public class MainCompanion {
 
     public void setGoodPingLimit(int goodPingLimit) {
         this.goodPingLimit = goodPingLimit;
+    }
+
+    public SqliteDAP getSqliteDAP() {
+        return sqliteDAP;
+    }
+
+    public Logger getLogger() {
+        return logger;
     }
 }

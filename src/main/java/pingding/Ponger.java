@@ -25,6 +25,7 @@ public class Ponger {
     public void pingUrl(PingThing pingThing) {
         try {
             InetAddress address = InetAddress.getByName(pingThing.getUrl());
+            boolean log = false;
             long startTime = System.nanoTime();
             if (address.isReachable(3000)) {
                 long endTime = System.nanoTime();
@@ -32,6 +33,7 @@ public class Ponger {
             } else {
                 pingThing.setLatency("Offline");
             }
+            new Thread(() -> mainCompanion.getLogger().logPingThing(pingThing)).start();
             String ip = address.getHostAddress();
             if (ip != null) {
                 pingThing.setIp(ip);

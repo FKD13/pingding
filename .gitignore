@@ -9,6 +9,9 @@ out/
 # Log file
 *.log
 
+# DataBases - sqlite
+*.db
+
 # Package Files #
 *.jar
 *.war
