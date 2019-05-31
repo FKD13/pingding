@@ -1,4 +1,4 @@
-package pingding;
+package fkd13.pingding;
 
 import javafx.event.EventHandler;
 import javafx.scene.control.TableColumn;

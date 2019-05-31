@@ -1,4 +1,4 @@
-package pingding;
+package fkd13.pingding;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +15,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         mainCompanion = new MainCompanion(this);
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Main.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fkd13/pingding/Main.fxml"));
         loader.setController(mainCompanion);
         Scene scene = new Scene(loader.load());
         primaryStage.setTitle("PingDing");

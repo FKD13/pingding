@@ -1,4 +1,4 @@
-package pingding;
+package fkd13.pingding;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;

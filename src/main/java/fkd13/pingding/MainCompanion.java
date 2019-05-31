@@ -1,4 +1,4 @@
-package pingding;
+package fkd13.pingding;
 
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
@@ -49,7 +49,7 @@ public class MainCompanion {
 
     public void initialize() {
 
-        model = new ConfigReader("/config.txt").getUrls();
+        model = new ConfigReader("/fkd13/pingding/config.txt").getUrls();
         ponger = new Ponger(this);
 
         table.setItems(model);
@@ -96,7 +96,7 @@ public class MainCompanion {
     }
 
     private void onPingLimit() {
-        main.openPopupWindow("/PingLimitWindow.fxml", "PingLimit", new PingLimitCompanion(this));
+        main.openPopupWindow("/fkd13/pingding/PingLimitWindow.fxml", "PingLimit", new PingLimitCompanion(this));
     }
 
     private void onInsert() {
@@ -114,7 +114,7 @@ public class MainCompanion {
 
     public void quit() {
         timer.cancel();
-        new ConfigWriter("/config.txt").saveUrls(model);
+        new ConfigWriter("/fkd13/pingding/config.txt").saveUrls(model);
     }
 
     //getters and setters

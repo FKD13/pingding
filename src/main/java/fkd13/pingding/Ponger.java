@@ -1,4 +1,4 @@
-package pingding;
+package fkd13.pingding;
 
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
