@@ -4,6 +4,9 @@
 
 A thing that Pings things
 
+
+Structure taken from https://github.com/openjfx/samples/tree/master/CommandLine/Modular/Maven
+
 ## Requirements
 
 - Java 11
@@ -21,6 +24,11 @@ The program will update it's values every 10 seconds.
 
 
 
-## Running
+## Running on linux
 
     mvn clean javafx:run
+
+## Creating and running JRE
+
+    mvn clean javafx:jlink
+    target/pingding/bin/launcher 

@@ -1,4 +1,4 @@
-package pingding;
+package fkd13.pingding;
 
 import javafx.scene.Scene;
 import javafx.stage.Stage;

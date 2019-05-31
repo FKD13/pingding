@@ -1,5 +1,6 @@
-package pingding;
+package fkd13.pingding;
 
+import fkd13.pingding.pinglimitwindow.PingLimitCompanion;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -9,7 +10,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.util.converter.DefaultStringConverter;
-import pingding.pinglimitwindow.PingLimitCompanion;
 
 import java.util.Timer;
 import java.util.TimerTask;

@@ -1,4 +1,4 @@
-package pingding.pinglimitwindow;
+package fkd13.pingding.pinglimitwindow;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -6,8 +6,8 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.util.converter.NumberStringConverter;
-import pingding.MainCompanion;
-import pingding.Popup;
+import fkd13.pingding.MainCompanion;
+import fkd13.pingding.Popup;
 
 public class PingLimitCompanion implements Popup {
 

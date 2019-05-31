@@ -1,4 +1,4 @@
-package pingding;
+package fkd13.pingding;
 
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableCell;
